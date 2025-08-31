@@ -1,0 +1,11 @@
+[package]
+name = "kcore"
+version = "0.1.0"
+edition = "2024"
+
+[target.'cfg(any(target_arch="riscv32",target_arch="riscv64"))'.dependencies]
+riscv_utils = { git = "https://github.com/lego-os/riscv_utils" }
+
+[dependencies]
+time = {version = "0", default-features = false}
+log = "0"
